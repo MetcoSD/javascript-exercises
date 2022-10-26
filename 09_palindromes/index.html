@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const palindromes = function (str) {// "hello, My Friend"
+    let strToLower = str.toLowerCase();
+    let strNoComma = strToLower.replaceAll(',', "");
+    let strNoPeriod = strNoComma.replaceAll('.','');
+    // "hello my friend"
+    let strNoSpace = strNoPeriod.replace(/\s/g, '');
+    // "hellomyfriend"
+    let strArray = strNoPeriod.split("");
+    // ["h","e","l".ect]
+    let reverseArray = strArray.reverse();
+    // ["d","n","e",ect]
+    let reverseString = reverseArray.join();
+    reverseString = reverseString.replaceAll(',', '');
+    // "dneirfymolleh"
+    if (reverseString == strNoPeriod)
+    //dneirfymolleh == "hellomyfriend" 
+        return true;
+    else{
+        return false;
+    }
+
+
+};
+palindromes("Animal loots foliated detail of stool lamina.")
+    </script>
+</body>
+</html>
